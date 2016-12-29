@@ -435,6 +435,11 @@
                 <artifactId>mybatis-paginator</artifactId>
                 <version>1.2.17</version>
             </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>5.0.0-rc</version>
+            </dependency>
 
             <!--velocity-->
             <dependency>
@@ -764,6 +769,45 @@
                         </includes>
                         -->
                     </configuration>
+                </plugin>
+
+
+                <plugin>
+                    <groupId>org.mybatis.generator</groupId>
+                    <artifactId>mybatis-generator-maven-plugin</artifactId>
+                    <version>1.3.5</version>
+                    <executions>
+                        <execution>
+                            <id>Generate MyBatis Artifacts</id>
+                            <goals>
+                                <goal>generate</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <configurationFile>target/classes/mybatis-generator.xml</configurationFile>
+                        <verbose>true</verbose>
+                        <overwrite>true</overwrite>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>mysql</groupId>
+                            <artifactId>mysql-connector-java</artifactId>
+                            <version>5.1.38</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.mybatis</groupId>
+                            <artifactId>mybatis</artifactId>
+                            <version>3.4.0</version>
+                        </dependency>
+                        <!--
+                        <dependency>
+                            <groupId>com.yanll.frameworks</groupId>
+                            <artifactId>frameworks-util</artifactId>
+                            <version>1.0-SNAPSHOT</version>
+                        </dependency>
+                        -->
+                    </dependencies>
                 </plugin>
 
 
