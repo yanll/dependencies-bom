@@ -86,12 +86,12 @@ pom.xml配置关键点：
     与packaging、Lifecycle的绑定关系
 
 常用插件：
-    集合当前项目讲解以下插件
+    结合当前项目讲解以下插件
     http://www.infoq.com/cn/profile/许晓斌
 
+单元测试：
 
-
-
+结合当前项目讲解自动化构建及部署：
 
 使用技巧：
 	脱离IDE，自动构建，管理
@@ -104,6 +104,7 @@ pom.xml配置关键点：
         导入pom而非项目
 	    导入顺序，若ide导入，环境改变将导致配置失效，不会干预pom，应优先配置pom
 
+Intellij IDEA：
 
 
 扩展：
