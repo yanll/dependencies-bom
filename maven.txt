@@ -1,39 +1,102 @@
-简介
-	Ant（功能强大，配置复杂，无中央仓库） Maven（简化配置，仓库，标准化） Gradle（语法灵活，自由，难以掌握）
+简介：
+    功能：
+    项目构建、管理、持续集成的工具
+    提供了帮助管理、构建、文档、报告、依赖、SCMS、发布、分发等支持
+    将项目过程规范化、自动化、高效化
 
-	标准的好处，自由的代价
+    对比：
+	Ant：功能强大，配置复杂，无仓库概念
+	Maven：配置简单，仓库，强标准化
+	Gradle：配置简单，仓库，语法灵活，弱标准化
+	总结：标准的好处，自由的代价
 
+
+图示：中央仓库、私服仓库、本地仓库、target
+    关系
+    编译、依赖顺序
+    依赖安装、部署
+
+Maven conf/settings.xml、.m2/settings.xml、pom.xml
+    三者配置关系
+    顺序
+    配置建议
+    settings.xml：结合实际项目配置讲解
+        profile：JDK、编码等提取到项目pom中，解耦
+        server：
+        mirrors：
+        repositories:
+        activeProfiles:
+
+
+约定优于配置：
+    约定俗成，强标准化
+    优先配置pom而非IDE，与IDE及开发环境解耦
+
+
+生命周期：
+    clean、compile、package、install、deploy
+    jar、war、ear...
+
+特点：
+    工程聚合
+    依赖传递
+    配置继承
+    变量机制（filter）
+传递依赖 与 排除依赖
+	依赖冲突
+	聚合
+	继承
+
+
+pom.xml配置关键点：
+    坐标：
+        <groupId>com.yanll</groupId>
+        <artifactId>dependencies-bom</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    类型：
+        <packaging>pom</packaging>
+
+标准插件：
+    maven-war-plugin、maven-jar-plugin、maven-compile-plugin、maven-resources-plugin
+    与packaging、Lifecycle的绑定关系
+
+常用插件：
+    集合当前项目讲解以下插件
+    http://www.infoq.com/cn/profile/许晓斌
+
+
+
+filter机制（变量编译）
+	    二机制文件排除方案（公钥私钥文件、dat数据等文件应禁止filter）：
+	    1.assembly.xml:fileSet filter=false
+	    2.resources:配置文件排除
+
+使用技巧：
 	脱离IDE，自动构建，管理
+	全局执行，检测配置
+	shell配置全局依赖部署
+    多src（非标准化，尽量避免），build-helper-maven-plugin
+    如何搜索所需依赖
+    Intellij IDEA：
+        空项目+子项目
+        导入pom而非项目
 
 
-	全局执行，检测配置正确
+
+
+扩展：
+    基于maven的插件开发
+    基于Mybatis-generator的插件开发
 
 
 
-	maven：约定俗成，标准化
-
-	约定优于配置等概念是Maven的核心内容
-
-	idea
-
-	建空项目。导入项目，+子项目
 
 
-	多src（非标准化，尽量避免），build-helper-maven-plugin
 
 
-	几个仓库之间的关系
-	中央仓库
-	私服仓库
-	本地仓库
-	本地target
 
-	编译寻找依赖顺序
 
-	settings.xml
 
-	profile提取到项目中，解耦
-	server用户名密码
 
 
 	生命周期
@@ -92,34 +155,42 @@
 	idea+maven优势，ide自动加载maven配置，ide 零配置
 	导入顺序，若ide导入，换ide配置失效，不会干预pom，应优先配置pom
 
+附：
 
-	教程经验之谈
+	强烈推荐Maven专家极有价值的经验总结：
 	http://www.infoq.com/cn/profile/许晓斌
 
-	配置详解：
+	推荐文章：
 	http://www.tuicool.com/articles/f2yemaF
+	http://blog.csdn.net/wang379275614/article/details/43938011
+
+	中央仓库：
 	http://maven.aliyun.com/
+	http://mvnrepository.com/
+
+	推荐书籍：
 	maven权威指南
+    maven实战
 
-	http://blog.csdn.net/u012152619/article/details/51473380
 
 
-	filter（二机制排除）
+
+
+
 
 
 	jenkins
-	内网
+	不推荐内网使用
 
 	maven+git+jenkins+shell
-	传递依赖 与 排除依赖
-	依赖冲突
-	聚合
-	继承
 
 
 
 
 
-	2010年9月，乌龟壳公司偷偷把Hudson??变成了注册商标。2010年11月，Hudson社区的核心开发人员发现并angry了，双方进行了不太友好的会谈，不出意料的谈崩了。圣诞节过后，2011年的第一场雪，比以往来的要晚一些，几个秃顶的大叔在McDonald‘s的豪华包间里做了一个艰难的决定：
+
+	2010年9月，乌龟壳公司偷偷把Hudson??变成了注册商标。
+	2010年11月，Hudson社区的核心开发人员发现并angry了，双方进行了不太友好的会谈，不出意料的谈崩了。
+	圣诞节过后，2011年的第一场雪，比以往来的要晚一些，几个秃顶的大叔在McDonald‘s的豪华包间里做了一个艰难的决定：
 
 	mv -f hudson jenkins
