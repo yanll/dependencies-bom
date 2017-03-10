@@ -93,6 +93,7 @@ pom.xml配置关键点：
     与packaging、Lifecycle的绑定关系
 
 常用插件：
+    spring-boot-maven-plugin
     结合当前项目讲解以下插件
     http://www.infoq.com/cn/profile/许晓斌
 
