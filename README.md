@@ -182,6 +182,10 @@ maven+git+shell（去jenkins化）
     高内聚低耦合
         代码层面
         项目管理层面
+    service与service关系
+    deploy与impl关系
+    service与节点关系
+    VO DO DOMAIN关系
         
     避免选择与思考（接口设计原则）
     
