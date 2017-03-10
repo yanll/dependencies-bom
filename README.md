@@ -100,6 +100,12 @@ pom.xml配置关键点：
 
 结合当前项目讲解自动化构建及部署：
 
+
+
+扩展：
+    基于maven的插件开发
+    基于Mybatis-generator的插件开发
+    
 小技巧：
 	脱离IDE，自动构建，管理
 	全局执行，检测配置
@@ -124,10 +130,6 @@ pom.xml配置关键点：
 
 Intellij IDEA：
 
-
-扩展：
-    基于maven的插件开发
-    基于Mybatis-generator的插件开发
 
 
 
@@ -176,7 +178,14 @@ maven+git+shell（去jenkins化）
         <plugin interceptor="com.github.miemiedev.mybatis.paginator.OffsetLimitInterceptor">
             <property name="dialectClass" value="com.github.miemiedev.mybatis.paginator.dialect.MySQLDialect"/>
         </plugin>
-
+    高内聚低耦合
+        代码层面
+        项目管理层面
+        
+    避免选择与思考（接口设计原则）
+    
+    业务拆分
+        易分不易合，分布式结合业务实际按需求拆分
 
 
 
