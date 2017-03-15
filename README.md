@@ -5,25 +5,25 @@
 
 
 
-简介：
-    功能：
-    项目构建、管理、持续集成的工具
-    提供了帮助管理、构建、文档、报告、依赖、SCMS、发布、分发等支持
-    将项目过程规范化、自动化、高效化
+### 简介：
+    * 功能：
+    * 项目构建、管理、持续集成的工具
+    * 提供了帮助管理、构建、文档、报告、依赖、SCMS、发布、分发等支持
+    * 将项目过程规范化、自动化、高效化
 
-    对比：
-	Ant：功能强大，配置复杂，无仓库概念
-	Maven：配置简单，仓库，强标准化
-	Gradle：配置简单，仓库，语法灵活，弱标准化
-	总结：标准的好处，自由的代价
+    * 对比：
+	* Ant：功能强大，配置复杂，无仓库概念
+	* Maven：配置简单，仓库，强标准化
+	* Gradle：配置简单，仓库，语法灵活，弱标准化
+	* 总结：标准的好处，自由的代价
 
 
-图示中央仓库、私服仓库、本地仓库、target：
+### 图示中央仓库、私服仓库、本地仓库、target：
     关系
     编译、依赖顺序
     依赖安装、部署
 
-Maven conf/settings.xml、.m2/settings.xml、pom.xml
+### Maven conf/settings.xml、.m2/settings.xml、pom.xml
     三者配置关系
     顺序
     配置建议
@@ -35,16 +35,16 @@ Maven conf/settings.xml、.m2/settings.xml、pom.xml
         activeProfiles:
 
 
-约定优于配置：
+### 约定优于配置：
     约定俗成，强标准化
     优先配置pom而非IDE，与IDE及开发环境解耦
 
 
-图示生命周期：
+### 图示生命周期：
     clean、compile、package、install、deploy
     jar、war、ear...
 
-特点（图示）：
+### 特点（图示）：
     工程聚合
         module
     依赖传递与排除依赖
@@ -59,7 +59,7 @@ Maven conf/settings.xml、.m2/settings.xml、pom.xml
     插件机制（摆放）
 
 
-pom.xml配置关键点：
+### pom.xml配置关键点：
     <modelVersion>4.0.0</modelVersion>
     坐标：
     <groupId>com.yanll</groupId>
@@ -88,26 +88,26 @@ pom.xml配置关键点：
         </resources>
 
 
-标准插件：
+### 标准插件：
     maven-war-plugin、maven-jar-plugin、maven-compile-plugin、maven-resources-plugin
     与packaging、Lifecycle的绑定关系
 
-常用插件：
+### 常用插件：
     spring-boot-maven-plugin
     结合当前项目讲解以下插件
     http://www.infoq.com/cn/profile/许晓斌
 
-单元测试：
+### 单元测试：
 
-结合当前项目讲解自动化构建及部署：
+### 结合当前项目讲解自动化构建及部署：
 
 
 
-扩展：
+### 扩展：
     基于maven的插件开发
     基于Mybatis-generator的插件开发
     
-小技巧：
+### 小技巧：
 	脱离IDE，自动构建，管理
 	全局执行，检测配置
 	shell配置全局依赖部署
@@ -129,14 +129,14 @@ pom.xml配置关键点：
 
 
 
-Intellij IDEA：
+### Intellij IDEA：
 
 
 
 
 
 
-附：
+### 附：
 
 	强烈推荐Maven专家极有价值的经验总结：
 	http://www.infoq.com/cn/profile/许晓斌
@@ -156,16 +156,15 @@ Intellij IDEA：
 
 
 
-jenkins讲解：
+### jenkins讲解：
     注：不推荐外网使用
 
-shell简单使用：
+### shell简单使用：
+    maven+git+jenkins+shell
+    maven+git+shell（去jenkins化）
 
-maven+git+jenkins+shell
-maven+git+shell（去jenkins化）
 
-
-结合当前项目总结优化及重构：
+### 结合当前项目总结优化及重构：
     pom优化（项目层级、深度）
     代码标准化（生成、规范）
     网络带宽相关的外部依赖优化（重构、下沉）
