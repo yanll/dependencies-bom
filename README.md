@@ -196,4 +196,63 @@
 
 
 
+### 项目依赖关系：
+
+#### platform-dependencies
+* ----framework
+* --------financial-platform
+* ------------business
+* ------------api
+* ------------console
+* ------------schedule
+* ------------deploy
+* --------data-platform
+* ------------business
+* ------------console
+* ------------deploy
+* --------operation-platform（运营系统平台）
+* ------------business
+* ----------------coupon-service（卡券系统）
+* ----------------coupon-service-impl（卡券系统）
+* ------------console
+* ----------------coupon-console（卡券系统）
+* ------------schedule
+* ----------------coupon-job（卡券系统）
+* ------------deploy
+* ----------------deploy-coupon（卡券系统）
+* ----某项目（个别项目若较简单，不需要用到framework，则直接依赖platform-dependencies）
+
+
+#### platform-dependencies：
+* 全局依赖管理项目，仅pom文件
+* 在dependencyManagement定义各个依赖的版本号，具体是否引用由子项目的dependencies定义
+* 在pluginManagement定义插件版本号，具体是否引用由子项目的plugins定义
+* 在plugins定义全局插件（所有项目均会使用到的，例如build节点的finalName、resources配置，maven-compiler-plugin等公共插件）
+* 在distributionManagement配置全局nexus私服配置
+* 在properties配置全局属性，如版本、JDK、字符编码
+* 在profiles配置全局部署环境，如dev、test、pro
+
+
+* framework：
+* parent：platform-dependencies
+* 定义全局依赖，如log、common组件、spring、json，将financial-platform大部分移到这里
+
+
+
+* financial-platform、data-platform、peration-platform：
+* parent：framework
+* 定义各自子项目的全局配置
+
+
+* deploy：配置maven-assembly-plugin、maven-antrun-plugin
+* consol、api：配置maven-antrun-plugin
+
+
+* 原则：
+* 1.依赖关系自上而下，不产生逆向依赖。
+* 2.共用性越强，抽取至越高级别的项目中。
+
+
+* message-server和GenerateID-server暂时按现有不动，后期根据上面的结构慢慢调过来
+
 
