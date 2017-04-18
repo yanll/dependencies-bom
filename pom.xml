@@ -8,47 +8,13 @@
     <packaging>pom</packaging>
 
     <distributionManagement>
-        <repository>
-            <id>user-release</id>
-            <name>User Project Release</name>
-            <url>http://172.21.1.204:8081/nexus/content/repositories/releases/</url>
-            <uniqueVersion>false</uniqueVersion>
-        </repository>
-        <snapshotRepository>
-            <id>user-snapshots</id>
-            <name>User Project SNAPSHOTS</name>
-            <url>http://172.21.1.204:8081/nexus/content/repositories/snapshots/</url>
-            <uniqueVersion>false</uniqueVersion>
-        </snapshotRepository>
+
     </distributionManagement>
 
 
     <repositories>
 
-        <repository>
-            <id>oschina</id>
-            <name>oschina</name>
-            <url>http://maven.oschina.net/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>jBoss-thirdparty-releases</id>
-            <name>JBoss Thirdparty Releases</name>
-            <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
-        </repository>
-        <repository>
-            <id>repo.springsource.org</id>
-            <name>repo.springsource.org-releases</name>
-            <url>http://repo.springsource.org/libs-milestone-local</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
+
         <repository>
             <id>ali</id>
             <name>ali</name>
