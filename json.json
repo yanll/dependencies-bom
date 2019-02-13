@@ -1,9 +1,0 @@
-{
-  "code": 200,
-  "desc": "",
-  "data": [
-    "insert into m_permission (system_code,menu_id,url,permission_name) select 'auth_console',id,'/index/navi:GET','加载导航菜单' from m_menu where parent_id is not null;",
-    "insert into m_permission (system_code,menu_id,url,permission_name) select 'auth_console',id,'/system/list:GET','查询系统列表' from m_menu where parent_id is not null;",
-    "insert into m_permission (system_code,menu_id,url,permission_name) select 'auth_console',id,'/system/listpage:GET','分页查询系统列表' from m_menu where parent_id is not null;"
-  ]
-}
