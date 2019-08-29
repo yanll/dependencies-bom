@@ -72,3 +72,8 @@ insert into tbl_form_type(form_type_code,form_type_name)values('SHANGBAOFULI','�
 
 insert into tbl_form(form_type_code,form_name)values('SHANGBAOFULI','为配偶投保');
 insert into tbl_form(form_type_code,form_name)values('SHANGBAOFULI','为子女投保');
+
+
+update tbl_app_portal set corp_id='356e1dc1-4c11-419b-a043-cccb537dfb9b' where portal_status='ENABLED';
+
+alter table tbl_form add img_url varchar(256) null comment '图片地址';
