@@ -1,1 +1,744 @@
-{}
+{
+  "list": [
+    {
+      "type": "divider",
+      "icon": "icon-fengexian",
+      "options": {
+        "hidden": false,
+        "contentPosition": "left",
+        "remoteFunc": "func_1572255815552"
+      },
+      "name": "基本信息",
+      "key": "1572255815552",
+      "model": "divider_1572255815552",
+      "rules": []
+    },
+    {
+      "type": "input",
+      "icon": "icon-input",
+      "options": {
+        "width": "100%",
+        "defaultValue": "",
+        "required": false,
+        "dataType": "string",
+        "pattern": "",
+        "placeholder": "",
+        "customClass": "",
+        "disabled": false,
+        "labelWidth": 100,
+        "isLabelWidth": false,
+        "hidden": false,
+        "dataBind": true,
+        "showPassword": false,
+        "remoteFunc": "func_1572255398201"
+      },
+      "name": "商户名称",
+      "key": "1572255398201",
+      "model": "input_1572255398201",
+      "rules": [
+        {
+          "type": "string",
+          "message": "商户名称格式不正确"
+        }
+      ]
+    },
+    {
+      "type": "imgupload",
+      "icon": "icon-tupian",
+      "options": {
+        "defaultValue": [],
+        "size": {
+          "width": 100,
+          "height": 100
+        },
+        "width": "",
+        "tokenFunc": "funcGetToken",
+        "token": "",
+        "domain": "http://pfp81ptt6.bkt.clouddn.com/",
+        "disabled": false,
+        "limit": 8,
+        "multiple": false,
+        "isQiniu": false,
+        "isDelete": false,
+        "min": 0,
+        "isEdit": false,
+        "action": "https://jsonplaceholder.typicode.com/photos/",
+        "customClass": "",
+        "labelWidth": 100,
+        "isLabelWidth": false,
+        "hidden": false,
+        "dataBind": true,
+        "remoteFunc": "func_1572255499158"
+      },
+      "name": "头像",
+      "key": "1572255499158",
+      "model": "imgupload_1572255499158",
+      "rules": []
+    },
+    {
+      "type": "radio",
+      "icon": "icon-radio-active",
+      "options": {
+        "inline": false,
+        "defaultValue": "",
+        "showLabel": false,
+        "options": [
+          {
+            "value": "是",
+            "label": "Option 1"
+          },
+          {
+            "value": "否",
+            "label": "Option 2"
+          }
+        ],
+        "required": false,
+        "width": "",
+        "remote": false,
+        "remoteOptions": [],
+        "props": {
+          "value": "value",
+          "label": "label"
+        },
+        "remoteFunc": "func_1572256453893",
+        "customClass": "",
+        "labelWidth": 100,
+        "isLabelWidth": false,
+        "hidden": false,
+        "dataBind": true,
+        "disabled": false
+      },
+      "name": "是否新商户",
+      "key": "1572256453893",
+      "model": "radio_1572256453893",
+      "rules": []
+    },
+    {
+      "type": "date",
+      "icon": "icon-date",
+      "options": {
+        "defaultValue": "",
+        "readonly": false,
+        "disabled": false,
+        "editable": true,
+        "clearable": true,
+        "placeholder": "",
+        "startPlaceholder": "",
+        "endPlaceholder": "",
+        "type": "date",
+        "format": "yyyy-MM-dd",
+        "timestamp": false,
+        "required": false,
+        "width": "",
+        "customClass": "",
+        "labelWidth": 100,
+        "isLabelWidth": false,
+        "hidden": false,
+        "dataBind": true,
+        "remoteFunc": "func_1572256493746"
+      },
+      "name": "注册日期",
+      "key": "1572256493746",
+      "model": "date_1572256493746",
+      "rules": []
+    },
+    {
+      "type": "time",
+      "icon": "icon-time",
+      "options": {
+        "defaultValue": "",
+        "readonly": false,
+        "disabled": false,
+        "editable": true,
+        "clearable": true,
+        "placeholder": "",
+        "startPlaceholder": "",
+        "endPlaceholder": "",
+        "isRange": false,
+        "arrowControl": true,
+        "format": "HH:mm:ss",
+        "required": false,
+        "width": "",
+        "customClass": "",
+        "labelWidth": 100,
+        "isLabelWidth": false,
+        "hidden": false,
+        "dataBind": true,
+        "remoteFunc": "func_1572256498494"
+      },
+      "name": "营业开始时间",
+      "key": "1572256498494",
+      "model": "time_1572256498494",
+      "rules": []
+    },
+    {
+      "type": "time",
+      "icon": "icon-time",
+      "options": {
+        "defaultValue": "",
+        "readonly": false,
+        "disabled": false,
+        "editable": true,
+        "clearable": true,
+        "placeholder": "",
+        "startPlaceholder": "",
+        "endPlaceholder": "",
+        "isRange": false,
+        "arrowControl": true,
+        "format": "HH:mm:ss",
+        "required": false,
+        "width": "",
+        "customClass": "",
+        "labelWidth": 100,
+        "isLabelWidth": false,
+        "hidden": false,
+        "dataBind": true,
+        "remoteFunc": "func_1572256498494"
+      },
+      "name": "营业结束时间",
+      "key": "1572256533557",
+      "model": "time1572256533557",
+      "rules": []
+    },
+    {
+      "type": "textarea",
+      "icon": "icon-diy-com-textarea",
+      "options": {
+        "width": "100%",
+        "defaultValue": "",
+        "required": false,
+        "disabled": false,
+        "pattern": "",
+        "placeholder": "",
+        "customClass": "",
+        "labelWidth": 100,
+        "isLabelWidth": false,
+        "hidden": false,
+        "dataBind": true,
+        "remoteFunc": "func_1572255399683"
+      },
+      "name": "商户描述",
+      "key": "1572255399683",
+      "model": "textarea_1572255399683",
+      "rules": []
+    },
+    {
+      "type": "divider",
+      "icon": "icon-fengexian",
+      "options": {
+        "hidden": false,
+        "contentPosition": "left",
+        "remoteFunc": "func_1572255532209"
+      },
+      "name": "资质信息",
+      "key": "1572255698625",
+      "model": "divider1572255698625",
+      "rules": []
+    },
+    {
+      "type": "fileupload",
+      "icon": "icon-wenjianshangchuan",
+      "options": {
+        "defaultValue": [],
+        "width": "",
+        "tip": "请上传营业执照扫描件",
+        "action": "https://jsonplaceholder.typicode.com/photos/",
+        "customClass": "",
+        "disabled": false,
+        "limit": 9,
+        "fileList": [],
+        "labelWidth": 100,
+        "isLabelWidth": false,
+        "hidden": false,
+        "dataBind": true,
+        "remoteFunc": "func_1572255480155"
+      },
+      "name": "营业执照",
+      "key": "1572255480155",
+      "model": "fileupload_1572255480155",
+      "rules": []
+    },
+    {
+      "type": "divider",
+      "icon": "icon-fengexian",
+      "options": {
+        "hidden": false,
+        "contentPosition": "left",
+        "remoteFunc": "func_1572255532209"
+      },
+      "name": "平台商户",
+      "key": "1572255693394",
+      "model": "divider1572255693394",
+      "rules": []
+    },
+    {
+      "type": "table",
+      "icon": "icon-table",
+      "options": {
+        "defaultValue": [],
+        "customClass": "",
+        "labelWidth": 100,
+        "isLabelWidth": false,
+        "hidden": false,
+        "dataBind": true,
+        "disabled": false,
+        "remoteFunc": "func_1572255515076"
+      },
+      "tableColumns": [
+        {
+          "type": "input",
+          "icon": "icon-input",
+          "options": {
+            "width": "200px",
+            "defaultValue": "",
+            "required": false,
+            "dataType": "string",
+            "pattern": "",
+            "placeholder": "",
+            "customClass": "",
+            "disabled": false,
+            "labelWidth": 100,
+            "isLabelWidth": false,
+            "hidden": false,
+            "dataBind": true,
+            "showPassword": false,
+            "remoteFunc": "func_1572255542750",
+            "tableColumn": true
+          },
+          "name": "名称",
+          "novalid": {},
+          "key": "1572255542750",
+          "model": "input_1572255542750",
+          "rules": [
+            {
+              "type": "string",
+              "message": "名称格式不正确"
+            }
+          ]
+        },
+        {
+          "type": "input",
+          "icon": "icon-input",
+          "options": {
+            "width": "200px",
+            "defaultValue": "",
+            "required": false,
+            "dataType": "string",
+            "pattern": "",
+            "placeholder": "",
+            "customClass": "",
+            "disabled": false,
+            "labelWidth": 100,
+            "isLabelWidth": false,
+            "hidden": false,
+            "dataBind": true,
+            "showPassword": false,
+            "remoteFunc": "func_1572255542750",
+            "tableColumn": true
+          },
+          "name": "描述",
+          "novalid": {},
+          "key": "1572255572254",
+          "model": "input1572255572254",
+          "rules": [
+            {
+              "type": "string",
+              "message": "描述格式不正确"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "icon": "icon-check-box",
+          "options": {
+            "inline": false,
+            "defaultValue": [],
+            "showLabel": false,
+            "options": [
+              {
+                "value": "酒店"
+              },
+              {
+                "value": "餐饮"
+              },
+              {
+                "value": "出版"
+              }
+            ],
+            "required": false,
+            "width": "200px",
+            "remote": false,
+            "remoteOptions": [],
+            "props": {
+              "value": "value",
+              "label": "label"
+            },
+            "remoteFunc": "func_1572255608117",
+            "customClass": "",
+            "labelWidth": 100,
+            "isLabelWidth": false,
+            "hidden": false,
+            "dataBind": true,
+            "disabled": false,
+            "tableColumn": true
+          },
+          "name": "业务范围",
+          "novalid": {},
+          "key": "1572255608117",
+          "model": "checkbox_1572255608117",
+          "rules": []
+        }
+      ],
+      "name": "",
+      "key": "1572255515076",
+      "model": "table_1572255515076",
+      "rules": []
+    },
+    {
+      "type": "divider",
+      "icon": "icon-fengexian",
+      "options": {
+        "hidden": false,
+        "contentPosition": "left",
+        "remoteFunc": "func_1572255532209"
+      },
+      "name": "审核要素",
+      "key": "1572255689686",
+      "model": "divider1572255689686",
+      "rules": []
+    },
+    {
+      "type": "tabs",
+      "icon": "icon-tabs",
+      "tabs": [
+        {
+          "label": "基本信息审核",
+          "name": "tab_1",
+          "list": [
+            {
+              "type": "input",
+              "icon": "icon-input",
+              "options": {
+                "width": "100%",
+                "defaultValue": "",
+                "required": false,
+                "dataType": "string",
+                "pattern": "",
+                "placeholder": "",
+                "customClass": "",
+                "disabled": false,
+                "labelWidth": 100,
+                "isLabelWidth": false,
+                "hidden": false,
+                "dataBind": true,
+                "showPassword": false,
+                "remoteFunc": "func_1572255657117"
+              },
+              "name": "审核材料",
+              "key": "1572255657117",
+              "model": "input_1572255657117",
+              "rules": [
+                {
+                  "type": "string",
+                  "message": "审核材料格式不正确"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "资质信息审核",
+          "name": "tab_1572255526803",
+          "list": [
+            {
+              "type": "input",
+              "icon": "icon-input",
+              "options": {
+                "width": "100%",
+                "defaultValue": "",
+                "required": false,
+                "dataType": "string",
+                "pattern": "",
+                "placeholder": "",
+                "customClass": "",
+                "disabled": false,
+                "labelWidth": 100,
+                "isLabelWidth": false,
+                "hidden": false,
+                "dataBind": true,
+                "showPassword": false,
+                "remoteFunc": "func_1572255660131"
+              },
+              "name": "附件",
+              "key": "1572255660131",
+              "model": "input_1572255660131",
+              "rules": [
+                {
+                  "type": "string",
+                  "message": "附件格式不正确"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "options": {
+        "type": "",
+        "tabPosition": "top",
+        "customClass": "",
+        "hidden": false,
+        "remoteFunc": "func_1572255521530"
+      },
+      "name": "标签页",
+      "key": "1572255521530",
+      "model": "tabs_1572255521530",
+      "rules": []
+    },
+    {
+      "type": "divider",
+      "icon": "icon-fengexian",
+      "options": {
+        "hidden": false,
+        "contentPosition": "left",
+        "remoteFunc": "func_1572255721313"
+      },
+      "name": "商户地址",
+      "key": "1572255721313",
+      "model": "divider_1572255721313",
+      "rules": []
+    },
+    {
+      "type": "cascader",
+      "icon": "icon-jilianxuanze",
+      "options": {
+        "defaultValue": [],
+        "width": "",
+        "placeholder": "",
+        "disabled": false,
+        "clearable": false,
+        "remote": true,
+        "remoteOptions": [],
+        "props": {
+          "value": "value",
+          "label": "label",
+          "children": "children"
+        },
+        "remoteFunc": "getProvinces",
+        "customClass": "",
+        "labelWidth": 100,
+        "isLabelWidth": false,
+        "hidden": false,
+        "dataBind": true
+      },
+      "name": "省",
+      "key": "1572255512381",
+      "model": "cascader_1572255512381",
+      "rules": []
+    },
+    {
+      "type": "cascader",
+      "icon": "icon-jilianxuanze",
+      "options": {
+        "defaultValue": [],
+        "width": "",
+        "placeholder": "",
+        "disabled": false,
+        "clearable": false,
+        "remote": true,
+        "remoteOptions": [],
+        "props": {
+          "value": "value",
+          "label": "label",
+          "children": "children"
+        },
+        "remoteFunc": "getCities",
+        "customClass": "",
+        "labelWidth": 100,
+        "isLabelWidth": false,
+        "hidden": false,
+        "dataBind": true
+      },
+      "name": "市",
+      "key": "1572255506735",
+      "model": "cascader_1572255506735",
+      "rules": []
+    },
+    {
+      "type": "number",
+      "icon": "icon-number",
+      "options": {
+        "width": "",
+        "required": false,
+        "defaultValue": 0,
+        "min": 0,
+        "max": 0,
+        "step": 1,
+        "disabled": false,
+        "controlsPosition": "",
+        "customClass": "",
+        "labelWidth": 100,
+        "isLabelWidth": false,
+        "hidden": false,
+        "dataBind": true,
+        "remoteFunc": "func_1572255403659"
+      },
+      "name": "邮政编码",
+      "key": "1572255403659",
+      "model": "number_1572255403659",
+      "rules": []
+    },
+    {
+      "type": "divider",
+      "icon": "icon-fengexian",
+      "options": {
+        "hidden": false,
+        "contentPosition": "left",
+        "remoteFunc": "func_1572255719215"
+      },
+      "name": "商户介绍",
+      "key": "1572255719215",
+      "model": "divider_1572255719215",
+      "rules": []
+    },
+    {
+      "type": "editor",
+      "icon": "icon-fuwenbenkuang",
+      "options": {
+        "defaultValue": "",
+        "width": "",
+        "customClass": "",
+        "labelWidth": 100,
+        "isLabelWidth": false,
+        "hidden": false,
+        "dataBind": true,
+        "customToolbar": [
+          [
+            "bold",
+            "italic",
+            "underline",
+            "strike",
+            {
+              "color": []
+            },
+            {
+              "background": []
+            },
+            {
+              "align": []
+            },
+            {
+              "list": "ordered"
+            },
+            {
+              "list": "bullet"
+            },
+            {
+              "indent": "-1"
+            },
+            {
+              "indent": "+1"
+            }
+          ],
+          [
+            {
+              "font": []
+            },
+            {
+              "header": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                false
+              ]
+            }
+          ],
+          [
+            {
+              "script": "sub"
+            },
+            {
+              "script": "super"
+            }
+          ],
+          [
+            "link",
+            "image",
+            "blockquote",
+            "code-block"
+          ],
+          [
+            {
+              "direction": "rtl"
+            }
+          ],
+          [
+            "clean"
+          ]
+        ],
+        "disabled": false,
+        "remoteFunc": "func_1572255501963"
+      },
+      "name": "",
+      "key": "1572255501963",
+      "model": "editor_1572255501963",
+      "rules": []
+    },
+    {
+      "type": "divider",
+      "icon": "icon-fengexian",
+      "options": {
+        "hidden": false,
+        "contentPosition": "left",
+        "remoteFunc": "func_1572255726650"
+      },
+      "name": "分割线",
+      "key": "1572255726650",
+      "model": "divider_1572255726650",
+      "rules": []
+    },
+    {
+      "type": "blank",
+      "icon": "icon-zidingyishuju",
+      "options": {
+        "defaultType": "String",
+        "customClass": "<a>公司主页</a>",
+        "width": "",
+        "labelWidth": 100,
+        "isLabelWidth": false,
+        "hidden": false,
+        "dataBind": true,
+        "remoteFunc": "func_1572255451143"
+      },
+      "name": "自定义区域",
+      "key": "1572255451143",
+      "model": "blank_1572255451143",
+      "rules": []
+    },
+    {
+      "type": "text",
+      "icon": "icon-wenzishezhi-",
+      "options": {
+        "defaultValue": "请完整填写上述信息！",
+        "customClass": "",
+        "labelWidth": 100,
+        "isLabelWidth": false,
+        "hidden": false,
+        "dataBind": true,
+        "remoteFunc": "func_1572255441618"
+      },
+      "name": "温馨提示",
+      "key": "1572255441618",
+      "model": "text_1572255441618",
+      "rules": []
+    }
+  ],
+  "config": {
+    "labelWidth": 100,
+    "labelPosition": "right",
+    "size": "small",
+    "customClass": ""
+  }
+}
