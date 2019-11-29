@@ -17,11 +17,12 @@
     </repositories>
 
 
+    <!--
     <modules>
         <module>starter-commons</module>
         <module>starter-logging</module>
         <module>starter-jackson</module>
     </modules>
-
+    -->
 
 </project>
