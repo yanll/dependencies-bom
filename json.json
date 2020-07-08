@@ -1,1 +1,101 @@
-{}
+{
+  "config": {
+    "labelWidth": 100,
+    "labelPosition": "top",
+    "size": "mini",
+    "customClass": "",
+    "layoutCount": "4"
+  },
+  "list": [
+    {
+      "name": "主键",
+      "key": "ID",
+      "model": "ID",
+      "type": "input",
+      "icon": "",
+      "entityId": "79f48825-af98-11ea-8971-4485003d2bac",
+      "options": {
+        "width": false,
+        "hidden": true,
+        "disabled": false,
+        "add": false,
+        "delete": false,
+        "condition": "",
+        "remoteFunc": "",
+        "defaultValue": "",
+        "required": false,
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "dataType": "string",
+        "pattern": ""
+      },
+      "rules": [
+        {
+          "type": "string",
+          "message": "主键格式不正确"
+        }
+      ],
+      "tableColumns": []
+    },
+    {
+      "name": "产品编码",
+      "key": "marketingProduct",
+      "model": "marketingProduct",
+      "type": "select",
+      "icon": "",
+      "entityId": "79f48825-af98-11ea-8971-4485003d2bac",
+      "options": {
+        "width": true,
+        "hidden": false,
+        "disabled": false,
+        "add": false,
+        "delete": false,
+        "condition": "",
+        "remoteFunc": "",
+        "defaultValue": "",
+        "required": false,
+        "clearable": true,
+        "remote": false,
+        "filterable": true,
+        "showLabel": true,
+        "inline": true,
+        "placeholder": "",
+        "remoteOptions": [],
+        "options": [
+          {
+            "value": "DST",
+            "label": "电商通"
+          }
+        ],
+        "props": {
+          "value": "value",
+          "label": "label"
+        }
+      },
+      "rules": [],
+      "tableColumns": []
+    },
+    {
+      "name": "产品信息",
+      "key": "product",
+      "model": "product",
+      "type": "productForm",
+      "icon": "",
+      "entityId": "79f48825-af98-11ea-8971-4485003d2bac",
+      "options": {
+        "width": true,
+        "hidden": false,
+        "disabled": true,
+        "add": false,
+        "delete": false,
+        "condition": "",
+        "remoteFunc": "dyn_product",
+        "defaultValue": []
+      },
+      "rules": [],
+      "tableColumns": [],
+      "variableKey": "product"
+    }
+  ]
+}
